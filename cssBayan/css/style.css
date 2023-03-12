@@ -6,7 +6,7 @@ body {
 }
 
 .accordion {
-	margin: 10% auto;
+	margin: 1em auto;
 	max-width: 50%;
 	display: block;
 }
