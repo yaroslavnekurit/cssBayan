@@ -51,3 +51,48 @@ body {
 	width: 20%;
 	height: 20%;
 }
+
+.accordion__img,
+.accordion__item {
+	transition: all 0.3s ease;
+}
+
+.accordion__item:target {
+	height: 100%;
+}
+
+.accordion__item:target .accordion__img {
+	width: 50%;
+	height: 50%;
+}
+
+.accordion__item:target .accordion__head-title {
+	color: #2b2b2b;
+}
+
+.accordion__item:target .accordion__head-img {
+	transform: rotate(135deg);
+}
+
+@media (hover: hover) {
+	.accordion__item:hover {
+		height: 100%;
+	}
+
+	.accordion__item:hover .accordion__img {
+		width: 40%;
+		height: 40%;
+	}
+
+	.accordion:hover .accordion__head-img {
+		opacity: 1;
+	}
+
+	.accordion:hover .accordion__head-title {
+		color: #2b2b2b;
+	}
+
+	.accordion__item:hover .accordion__head-img {
+		transform: rotate(135deg);
+	}
+}
