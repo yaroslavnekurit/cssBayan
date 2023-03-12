@@ -4,3 +4,50 @@ body {
 	background-color: fff7d9;
 	font-family: 'Patua One', cursive;
 }
+
+.accordion {
+	margin: 10% auto;
+	max-width: 50%;
+	display: block;
+}
+
+.accordion__title {
+	font-size: 3em;
+	width: 100%;
+	line-height: 1.5em;
+	color: #2b2b2b;
+}
+
+.accordion__item {
+	display: block;
+	margin-top: 0.5em;
+	height: 2.2em;
+	width: 100%;
+	overflow: hidden;
+	border-top: 2px solid rgba(26, 26, 26, 0.6);
+}
+
+.accordion__head {
+	display: flex;
+	justify-content: space-between;
+}
+
+.accordion__head-title {
+	color: blue;
+	font-size: 1.5em;
+	background-image: none;
+	margin-bottom: 0.3em;
+	padding: 0.3em 0;
+}
+
+.accordion__head-img {
+	height: 1.5em;
+	opacity: 0;
+}
+
+.accordion__img {
+	display: block;
+	margin: 0 auto;
+	width: 20%;
+	height: 20%;
+}
