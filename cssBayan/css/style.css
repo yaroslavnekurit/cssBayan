@@ -1,0 +1,139 @@
+@import url(nullstyle.css);
+
+body {
+	background-color: #e3e3e3;
+	font-family: 'Patua One', cursive;
+}
+
+.accordion {
+	margin: 1em auto;
+	max-width: 50%;
+	display: block;
+}
+
+.accordion__title {
+	font-size: 3em;
+	width: 100%;
+	line-height: 1.5em;
+	color: #2b2b2b;
+}
+
+.accordion__item {
+	display: block;
+	margin-top: 0.5em;
+	height: 2.2em;
+	width: 100%;
+	overflow: hidden;
+	border-top: 2px solid rgba(26, 26, 26, 0.6);
+}
+
+.accordion__head {
+	display: flex;
+	justify-content: space-between;
+}
+
+.accordion__head-title {
+	color: blue;
+	font-size: 1.5em;
+	background-image: none;
+	margin-bottom: 0.3em;
+	padding: 0.3em 0;
+}
+
+.accordion__head-img {
+	height: 1.5em;
+	opacity: 0;
+}
+
+.accordion__img {
+	display: block;
+	margin: 0 auto;
+	width: 20%;
+	height: 20%;
+}
+
+.accordion__img,
+.accordion__item {
+	transition: all 0.3s ease;
+}
+
+.accordion__item:target {
+	height: 100%;
+}
+
+.accordion__item:target .accordion__img {
+	width: 50%;
+	height: 50%;
+}
+
+.accordion__item:target .accordion__head-title {
+	color: #2b2b2b;
+}
+
+.accordion__item:target .accordion__head-img {
+	transform: rotate(135deg);
+}
+
+@media (hover: hover) {
+	.accordion__item:hover {
+		height: 100%;
+	}
+
+	.accordion__item:hover .accordion__img {
+		width: 40%;
+		height: 40%;
+	}
+
+	.accordion:hover .accordion__head-img {
+		opacity: 1;
+	}
+
+	.accordion:hover .accordion__head-title {
+		color: #2b2b2b;
+	}
+
+	.accordion__item:hover .accordion__head-img {
+		transform: rotate(135deg);
+	}
+}
+
+@media (max-width: 820px) {
+	.accordion {
+		max-width: 70%;
+	}
+	.accordion__head-title {
+		color: #2b2b2b;
+	}
+	.accordion__head-img {
+		opacity: 1;
+	}
+	.accordion__title {
+		font-size: 2em;
+	}
+	.accordion__head-title {
+		font-size: 1.5em;
+	}
+	.accordion__item:target .accordion__img {
+		width: 70%;
+		height: 70%;
+	}
+}
+
+@media (max-width: 320px) {
+	.accordion__title {
+		font-size: 1.5em;
+	}
+	.accordion__head-title {
+		font-size: 1em;
+	}
+	.accordion {
+		max-width: 80%;
+	}
+	.accordion__item {
+		height: 2em;
+	}
+	.accordion__item:target .accordion__img {
+		width: 80%;
+		height: 80%;
+	}
+}
